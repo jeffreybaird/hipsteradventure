@@ -10,8 +10,8 @@ defmodule Game do
     draw(2,updated_player)
   end
 
-  def draw(2, _) do
-
+  def draw(2, player) do
+    IO.puts "#{player.name}, you have ended the game with #{player.cigarettes} cigarettes"
   end
 
 

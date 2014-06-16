@@ -1,6 +1,5 @@
 defmodule Phase.Introduction do
 
-
   def title do
     IO.puts "Hipster Adventure\n"
     IO.puts "--------------------\n\n"
