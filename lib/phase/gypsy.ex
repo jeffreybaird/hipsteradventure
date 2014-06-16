@@ -14,7 +14,8 @@ defmodule Phase.Gypsy do
 
   def _guess_sequence(player) do
     guess = IO.gets "What is your guess?"
-    _check_guess(player, format_guess(guess),:random.uniform(5), 0)
+    gy_guess = :random.uniform(5)
+    _check_guess(player, format_guess(guess),gy_guess, 0)
   end
 
   def _check_guess(player, guess, gypsy_guess, 0) do
