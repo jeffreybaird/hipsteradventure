@@ -1,5 +1,8 @@
 defmodule Game do
 
+  @moduledoc """
+  Handles the main draw functions for the application
+  """
   def draw(0, player) do
     updated_player = Phase.Introduction.play(player)
     draw(1,updated_player)

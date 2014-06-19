@@ -1,7 +1,35 @@
 defmodule Phase.Gypsy do
 
+  @doc ~S"""
+  This is the entry point for the phase.
+
+  ## Examples
+
+      iex> Phase.Gypsy.play({name: "jeff"})
+
+  """
+
   def play(player) do
     _part_one(player)
+  end
+
+  @doc ~S"""
+  Formats the input for usage, when `guess` is a binary it removes
+  newline characters and creates an integer.
+
+  ## Examples
+
+      iex> Phase.Gypsy.format_guess "1\n"
+      1
+
+  """
+
+  def format_guess(guess) when is_binary(guess) do
+    String.strip(guess, ?\n) |> String.to_integer
+  end
+
+  def format_guess(guess) when is_number(guess) do
+    guess
   end
 
   def _part_one(player) do
@@ -34,14 +62,6 @@ defmodule Phase.Gypsy do
     else
       _check_guess(player,guess, gypsy_guess ,n+1)
     end
-  end
-
-  def format_guess(guess) when is_binary(guess) do
-    String.strip(guess, ?\n) |> String.to_integer
-  end
-
-  def format_guess(guess) when is_number(guess) do
-    guess
   end
 
   def _part_two(player, guess) do
