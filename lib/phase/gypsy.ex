@@ -1,14 +1,5 @@
 defmodule Phase.Gypsy do
 
-  @doc ~S"""
-  This is the entry point for the phase.
-
-  ## Examples
-
-      iex> Phase.Gypsy.play({name: "jeff"})
-
-  """
-
   def play(player) do
     _part_one(player)
   end
